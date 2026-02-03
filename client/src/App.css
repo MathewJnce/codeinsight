@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+body { 
+  background-color: #0d1117; /* GitHub Dark Dim */
+  color: #c9d1d9; 
+  font-family: 'Inter', sans-serif; 
+  margin: 0; 
+  overflow: hidden; 
+}
+
+/* --- HEADER --- */
+.main-header { 
+  height: 65px; 
+  background: rgba(22, 27, 34, 0.8); /* Glass Effect */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #30363d; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0 25px; 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.brand { display: flex; align-items: center; gap: 15px; }
+.brand h2 { 
+  margin: 0; 
+  font-size: 20px; 
+  font-weight: 700; 
+  background: linear-gradient(90deg, #58a6ff, #a371f7); /* Gradient Text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.brand span { font-size: 12px; color: #8b949e; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px;}
+
+/* Status Dot Pulse Animation */
+.status-dot { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px;}
+.status-dot::before { content: ''; width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.status-dot.ready::before { background: #3fb950; box-shadow: 0 0 10px #3fb950; }
+.status-dot.busy::before { background: #d29922; box-shadow: 0 0 10px #d29922; }
+
+/* Buttons */
+.header-actions { display: flex; gap: 12px; }
+button { 
+  padding: 10px 18px; 
+  cursor: pointer; 
+  border: none; 
+  border-radius: 6px; 
+  font-weight: 600; 
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-submit { 
+  background: linear-gradient(135deg, #238636, #2ea043); 
+  color: white; 
+  box-shadow: 0 4px 15px rgba(46, 160, 67, 0.4);
+}
+.btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(46, 160, 67, 0.6); }
+
+.btn-logout { background: #21262d; color: #f85149; border: 1px solid #30363d; }
+.btn-logout:hover { background: #290e10; border-color: #f85149; }
+
+/* --- SPLIT VIEW --- */
+.dashboard-container { display: flex; flex-direction: column; height: 100vh; }
+.split-view { display: flex; flex: 1; height: calc(100vh - 65px); }
+
+/* Left Pane (Editor) */
+.editor-pane { flex: 6; border-right: 1px solid #30363d; display: flex; flex-direction: column; position: relative; }
+
+/* Right Pane (Output) */
+.output-pane { flex: 4; background-color: #0d1117; display: flex; flex-direction: column; }
+
+.pane-header { 
+  background: #161b22; 
+  padding: 12px 20px; 
+  font-size: 12px; 
+  text-transform: uppercase; 
+  letter-spacing: 1.2px; 
+  color: #7d8590; 
+  font-weight: 700; 
+  border-bottom: 1px solid #30363d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- CARDS & ANALYSIS --- */
+.analysis-content { padding: 25px; overflow-y: auto; height: 100%; scrollbar-width: thin; scrollbar-color: #30363d transparent; }
+
+/* Score Card */
+.result-card { 
+  background: #161b22; 
+  padding: 20px; 
+  border-radius: 12px; 
+  border: 1px solid #30363d; 
+  margin-bottom: 25px; 
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle glow behind the card */
+.result-card::after {
+  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+}
+.result-card.safe::after { background: #3fb950; }
+.result-card.danger::after { background: #f85149; }
+
+.result-card h4 { margin: 0 0 5px 0; color: #fff; font-size: 16px; }
+.score-row { display: flex; align-items: baseline; gap: 12px; margin-top: 10px;}
+.big-score { font-size: 36px; font-weight: 800; color: #fff; letter-spacing: -1px; }
+.label { color: #8b949e; font-size: 14px; }
+
+/* Error Items */
+.error-list { display: flex; flex-direction: column; gap: 12px; }
+.error-item { 
+  background: #161b22; 
+  padding: 16px; 
+  border-radius: 8px; 
+  border: 1px solid #30363d; 
+  transition: transform 0.2s;
+}
+.error-item:hover { transform: translateX(5px); border-color: #58a6ff; }
+
+.error-header { display: flex; justify-content: space-between; margin-bottom: 8px; align-items: center; }
+.line-badge { 
+  background: #1f6feb; color: white; 
+  padding: 4px 8px; border-radius: 4px; 
+  font-family: 'Fira Code', monospace; font-size: 11px; 
+}
+.severity-badge { font-size: 11px; font-weight: bold; text-transform: uppercase; }
+.error-item.error .severity-badge { color: #f85149; }
+.error-item.warning .severity-badge { color: #d29922; }
+
+.error-msg { margin: 0; font-size: 14px; color: #c9d1d9; line-height: 1.5; }
+.empty-state { text-align: center; color: #484f58; margin-top: 50px; font-style: italic; }
