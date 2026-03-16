@@ -1,0 +1,234 @@
+{
+  "submissions": [
+    {
+      "id": 1,
+      "studentName": "mathew",
+      "code": "int a = 10",
+      "plagiarismScore": 0,
+      "grade": "10",
+      "timestamp": "10:04:26 am"
+    },
+    {
+      "id": 2,
+      "studentName": "mathew",
+      "code": "#include <std>\n\nint main() {\n    int total_marks = 450\n    int max_marks = 500;\n    \n    // LOGICAL ERROR: (450/500) results in 0 because it's integer division.\n    // 0 * 100 = 0.\n    float percentage = (total_marks / max_marks) * 100;\n\n    printf(\"Your percentage: %.2f%%\\n\", percentage); \n    // Output: 0.00% (Expected: 90.00%)\n\n    return 0;\n}",
+      "plagiarismScore": 12,
+      "grade": "80",
+      "timestamp": "10:49:38 am"
+    },
+    {
+      "id": 3,
+      "studentName": "joe",
+      "code": "// Write your C code here...\n\n#include <stdio.h>\n\nint main() {\n    int number = 10\n    \n    printf(\"Hello World\")\n    return 0;\n}",
+      "plagiarismScore": 12,
+      "grade": "50",
+      "timestamp": "2:14:20 pm"
+    },
+    {
+      "id": 4,
+      "studentName": "fdsafas",
+      "code": "// Write your C code here...\n\n#include <stdio.h>\n\nint main() {\n    int number = 10\n    \n    printf(\"Hello World\")\n    return 0;\n}",
+      "plagiarismScore": 12,
+      "grade": null,
+      "timestamp": "8:56:43 am"
+    },
+    {
+      "id": 5,
+      "studentName": "mathew",
+      "code": "// Write your C code here...\n\n#include <stdio.h>\n\nint main() {\n    int number = 10\n    \n    printf(\"Hello World\");\n    return 0;\n}",
+      "plagiarismScore": 12,
+      "grade": null,
+      "timestamp": "9:05:37 am"
+    },
+    {
+      "id": 6,
+      "studentName": "mathew",
+      "code": "// Write your C code here...\n\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello World\");\n    return 0;\n}",
+      "plagiarismScore": 12,
+      "grade": null,
+      "timestamp": "9:25:56 am"
+    },
+    {
+      "id": 7,
+      "studentName": "mathew",
+      "code": "\n\nint main() {\n    printf(\"Hello, Professional Debugger!\")\n    return 0;\n}",
+      "grade": null,
+      "timestamp": "9:28:02 am"
+    },
+    {
+      "id": 8,
+      "studentName": "jason",
+      "code": "\n\nint main() {\n    printf(\"Hello, Professional Debugger!\")\n    return 0;\n}",
+      "grade": "100",
+      "timestamp": "10:01:15 am"
+    },
+    {
+      "id": 9,
+      "studentName": "kkk",
+      "code": "// Professional Workspace\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Professional Debugger!\")\n    return 0;\n}",
+      "grade": "50",
+      "timestamp": "9:18:02 pm"
+    },
+    {
+      "id": 10,
+      "studentName": "fdsfs",
+      "code": "// Professional Workspace\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Professional Debugger!\")\n    return 0;\n}",
+      "grade": null,
+      "timestamp": "7:27:48 pm"
+    },
+    {
+      "id": 11,
+      "studentName": "dona",
+      "email": "student@test.com",
+      "code": "// Professional Workspace\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Professional Debugger!\\n\");\n    return 0;\n}",
+      "plagiarismScore": 25,
+      "grade": "100",
+      "timestamp": "4:33:42 pm"
+    },
+    {
+      "id": 12,
+      "studentName": "stephan",
+      "email": "student@test.com",
+      "code": "// Professional Workspace\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, Professional Debugger!\\n\");\n    return 0;\n}",
+      "plagiarismScore": 100,
+      "grade": null,
+      "timestamp": "6:57:48 pm"
+    },
+    {
+      "id": 13,
+      "studentName": "jacob",
+      "email": "student@test.com",
+      "code": "#include <stdio.h>\n\n#define LAST 10\n\nint main() {\n    int i, sum = 0;\n    for (i = 1; i <= LAST; i++) {\n        sum += i;\n    }\n    printf(\"sum = %d\\n\", sum); \n    return 0;\n}\n",
+      "plagiarismScore": 56,
+      "grade": "67",
+      "timestamp": "8:04:39 am"
+    },
+    {
+      "id": 14,
+      "studentName": "george",
+      "email": "student@test.com",
+      "code": "#include <stdio.h>\n\nint main() {\n    double num1, num2, result;\n    char op;\n\n    printf(\"Enter first number: \");\n    scanf(\"%lf\", &num1);\n\n    printf(\"Enter operator (+, -, *, /): \");\n    scanf(\" %c\", &op);  // Space clears input buffer\n\n    printf(\"Enter second number: \");\n    scanf(\"%lf\", &num2);\n\n    switch (op) {\n        case '+':\n            result = num1 + num2;\n            break;\n        case '-':\n            result = num1 - num2;\n            break;\n        case '*':\n            result = num1 * num2;\n            break;\n        case '/':\n            if (num2 != 0) {\n                result = num1 / num2;\n            } else {\n                printf(\"Error: Division by zero!\\n\");\n                return 1;\n            }\n            break;\n        default:\n            printf(\"Invalid operator!\\n\");\n            return 1;\n    }\n\n    printf(\"%.2lf %c %.2lf = %.2lf\\n\", num1, op, num2, result);\n    return 0;\n}\n",
+      "plagiarismScore": 23,
+      "grade": "100",
+      "timestamp": "7:36:51 pm"
+    },
+    {
+      "id": 15,
+      "studentName": "dhiya",
+      "email": "student@test.com",
+      "code": "#include <stdio.h>\n\nint main() {\n    double num1, num2, result;\n    char op;\n\n    printf(\"Enter first number: \");\n    scanf(\"%lf\", &num1);\n\n    printf(\"Enter operator (+, -, *, /): \");\n    scanf(\" %c\", &op);  // Space clears input buffer\n\n    printf(\"Enter second number: \");\n    scanf(\"%lf\", &num2);\n\n    switch (op) {\n        case '+':\n            result = num1 + num2;\n            break;\n        case '-':\n            result = num1 - num2;\n            break;\n        case '*':\n            result = num1 * num2;\n            break;\n        case '/':\n            if (num2 != 0) {\n                result = num1 / num2;\n            } else {\n                printf(\"Error: Division by zero!\\n\");\n                return 1;\n            }\n            break;\n        default:\n            printf(\"Invalid operator!\\n\");\n            return 1;\n    }\n\n    printf(\"%.2lf %c %.2lf = %.2lf\\n\", num1, op, num2, result);\n    return 0;\n}\n",
+      "plagiarismScore": 100,
+      "grade": "100",
+      "timestamp": "8:27:34 am"
+    },
+    {
+      "id": 16,
+      "studentName": "bency",
+      "email": "student@test.com",
+      "code": "#include <stdio.h>\n\nint main() {\n    double num1, num2, result;\n    char op;\n\n    printf(\"Enter first number: \");\n    scanf(\"%lf\", &num1);\n\n    printf(\"Enter operator (+, -, *, /): \");\n    scanf(\" %c\", &op);  // Space clears input buffer\n\n    printf(\"Enter second number: \");\n    scanf(\"%lf\", &num2);\n\n    switch (op) {\n        case '+':\n            result = num1 + num2;\n            break;\n        case '-':\n            result = num1 - num2;\n            break;\n        case '*':\n            result = num1 * num2;\n            break;\n        case '/':\n            if (num2 != 0) {\n                result = num1 / num2;\n            } else {\n                printf(\"Error: Division by zero!\\n\");\n                return 1;\n            }\n            break;\n        default:\n            printf(\"Invalid operator!\\n\");\n            return 1;\n    }\n\n    printf(\"%.2lf %c %.2lf = %.2lf\\n\", num1, op, num2, result);\n    return 0;\n}\n",
+      "plagiarismScore": 100,
+      "grade": "100",
+      "timestamp": "11:02:21 am"
+    },
+    {
+      "id": 17,
+      "studentName": "jordan",
+      "email": "student@test.com",
+      "code": "#include <stdio.h>\n\n#define LAST 10\n\nint main() {\n    int j, sum = 0;\n    for (j = 1; i <= LAST; j++) {\n        sum += j;\n    }\n    printf(\"sum = %d\\n\", sum);  // Outputs: sum = 55\n    return 0;\n}\n",
+      "plagiarismScore": 93,
+      "grade": null,
+      "timestamp": "6:41:46 am"
+    },
+    {
+      "id": 18,
+      "studentName": "mathew",
+      "email": "student@test.com",
+      "code": "#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\n    int data;\n    struct Node* next;\n};\n\n// Function prototypes\nstruct Node* createNode(int data);\nvoid insertAtEnd(struct Node** head, int data);\nvoid insertAtBeginning(struct Node** head, int data);\nvoid deleteNode(struct Node** head, int key);\nstruct Node* searchNode(struct Node* head, int key);\nvoid displayList(struct Node* head);\nvoid freeList(struct Node** head);\n\nint main() {\n    struct Node* head = NULL;\n    int choice, data, key;\n\n    while (1) {\n        printf(\"\\n1. Insert at end\\n2. Insert at beginning\\n3. Delete node\\n4. Search node\\n5. Display list\\n6. Exit\\nChoice: \");\n        scanf(\"%d\", &choice);\n\n        switch (choice) {\n            case 1:\n                printf(\"Enter data: \");\n                scanf(\"%d\", &data);\n                insertAtEnd(&head, data);\n                break;\n            case 2:\n                printf(\"Enter data: \");\n                scanf(\"%d\", &data);\n                insertAtBeginning(&head, data);\n                break;\n            case 3:\n                printf(\"Enter key to delete: \");\n                scanf(\"%d\", &key);\n                deleteNode(&head, key);\n                break;\n            case 4:\n                printf(\"Enter key to search: \");\n                scanf(\"%d\", &key);\n                if (searchNode(head, key)) {\n                    printf(\"%d found in list.\\n\", key);\n                } else {\n                    printf(\"%d not found.\\n\", key);\n                }\n                break;\n            case 5:\n                displayList(head);\n                break;\n            case 6:\n                freeList(&head);\n                return 0;\n            default:\n                printf(\"Invalid choice!\\n\");\n        }\n    }\n}\n\nstruct Node* createNode(int data) {\n    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\n    if (newNode == NULL) {\n        printf(\"Memory allocation failed!\\n\");\n        exit(1);\n    }\n    newNode->data = data;\n    newNode->next = NULL;\n    return newNode;\n}\n\nvoid insertAtEnd(struct Node** head, int data) {\n    struct Node* newNode = createNode(data);\n    if (*head == NULL) {\n        *head = newNode;\n        return;\n    }\n    struct Node* temp = *head;\n    while (temp->next != NULL) {\n        temp = temp->next;\n    }\n    temp->next = newNode;\n}\n\nvoid insertAtBeginning(struct Node** head, int data) {\n    struct Node* newNode = createNode(data);\n    newNode->next = *head;\n    *head = newNode;\n}\n\nvoid deleteNode(struct Node** head, int key) {\n    struct Node* temp = *head;\n    struct Node* prev = NULL;\n\n    if (temp != NULL && temp->data == key) {\n        *head = temp->next;\n        free(temp);\n        return;\n    }\n\n    while (temp != NULL && temp->data != key) {\n        prev = temp;\n        temp = temp->next;\n    }\n\n    if (temp == NULL) {\n        printf(\"Key not found!\\n\");\n        return;\n    }\n\n    prev->next = temp->next;\n    free(temp);\n}\n\nstruct Node* searchNode(struct Node* head, int key) {\n    struct Node* current = head;\n    while (current != NULL) {\n        if (current->data == key) {\n            return current;\n        }\n        current = current->next;\n    }\n    return NULL;\n}\n\nvoid displayList(struct Node* head) {\n    struct Node* temp = head;\n    if (temp == NULL) {\n        printf(\"List is empty!\\n\");\n        return;\n    }\n    printf(\"List: \");\n    while (temp != NULL) {\n        printf(\"%d -> \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"NULL\\n\");\n}\n\nvoid freeList(struct Node** head) {\n    struct Node* current = *head;\n    struct Node* next;\n\n    while (current != NULL) {\n        next = current->next;\n        free(current);\n        current = next;\n    }\n    *head = NULL;\n}\n",
+      "plagiarismScore": 22,
+      "grade": "85",
+      "timestamp": "9:18:48 am"
+    }
+  ],
+  "users": [
+    {
+      "id": 1772261149908,
+      "fullName": "john doe",
+      "email": "name@university.edu",
+      "password": "mathewjince",
+      "role": "Student"
+    },
+    {
+      "id": 1772290876638,
+      "fullName": "Mathew Jince",
+      "email": "mathewjince@university.edu",
+      "password": "qwertyuiop",
+      "role": "Student"
+    },
+    {
+      "id": 1772331791591,
+      "fullName": "name",
+      "email": "names@university.edu",
+      "password": "asdfghjkl",
+      "role": "Student"
+    },
+    {
+      "id": 1772331901599,
+      "fullName": "TEACHER",
+      "email": "teacher@university.edu",
+      "password": "rajagiri",
+      "role": "Teacher"
+    },
+    {
+      "id": 1772332386530,
+      "fullName": "manny",
+      "email": "george@university.edu",
+      "password": "zxcvbnm,",
+      "role": "Student"
+    },
+    {
+      "id": 1772373915786,
+      "fullName": "name2",
+      "email": "name2@university.edu",
+      "password": "qwertyuiop",
+      "role": "Student"
+    },
+    {
+      "id": 1772420192600,
+      "fullName": "dhiya",
+      "email": "dhiya@university.edu",
+      "password": "rajagiri",
+      "role": "Student"
+    },
+    {
+      "id": 1772429304126,
+      "fullName": "bency",
+      "email": "bency@university.edu",
+      "password": "rajagiri",
+      "role": "Student"
+    },
+    {
+      "id": 1772507151186,
+      "fullName": "john ",
+      "email": "john@university.edu",
+      "password": "rajagiri",
+      "role": "Student"
+    },
+    {
+      "id": 1772509620043,
+      "fullName": "mathews",
+      "email": "mathews@university.edu",
+      "password": "123456",
+      "role": "Student"
+    },
+    {
+      "id": 1772514130551,
+      "fullName": "denny",
+      "email": "denny@university.edu",
+      "password": "denny12345",
+      "role": "Teacher"
+    }
+  ],
+  "tests": [],
+  "testAttempts": [],
+  "practiceSessions": []
+}

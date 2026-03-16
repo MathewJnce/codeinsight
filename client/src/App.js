@@ -1,25 +1,51 @@
 import React, { useState } from "react";
 import Login from "./Login";
+import LandingPage from "./LandingPage"; 
 import StudentView from "./StudentView";
 import TeacherView from "./TeacherView";
+import AnalyticsView from "./AnalyticsView"; // <-- NEW IMPORT
 import "./App.css";
 
 function App() {
-  const [userRole, setUserRole] = useState(null); // 'student' | 'teacher' | null
+  const [user, setUser] = useState(null); // 'Student' or 'Teacher'
+  const [currentPage, setCurrentPage] = useState("login"); // 'login', 'landing', 'student-view', 'teacher-view', 'analytics-view'
+
+  const handleLogin = (role) => {
+    setUser(role);
+    setCurrentPage("landing"); 
+  };
+
+  const handleNavigate = (page) => {
+    setCurrentPage(page);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    setCurrentPage("login");
+  };
 
   return (
-    <div className="app-root">
-      {/* 1. If not logged in, show Login Screen */}
-      {!userRole && <Login onLogin={setUserRole} />}
-
-      {/* 2. Show Student Dashboard */}
-      {userRole === "student" && (
-        <StudentView onLogout={() => setUserRole(null)} />
+    <div>
+      {currentPage === "login" && <Login onLogin={handleLogin} />}
+      
+      {currentPage === "landing" && (
+        <LandingPage 
+          userType={user} 
+          onNavigate={handleNavigate} 
+          onLogout={handleLogout} 
+        />
       )}
 
-      {/* 3. Show Teacher Dashboard */}
-      {userRole === "teacher" && (
-        <TeacherView onLogout={() => setUserRole(null)} />
+      {currentPage === "student-view" && <StudentView onLogout={handleLogout} />}
+      
+      {currentPage === "teacher-view" && <TeacherView onLogout={handleLogout} />}
+
+      {/* --- NEW ANALYTICS ROUTE --- */}
+      {currentPage === "analytics-view" && (
+        <AnalyticsView 
+          userRole={user} 
+          onBack={() => setCurrentPage("landing")} 
+        />
       )}
     </div>
   );
